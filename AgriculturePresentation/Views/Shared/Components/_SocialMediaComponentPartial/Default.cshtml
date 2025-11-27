@@ -1,0 +1,16 @@
+﻿@model List<SocialMedia>
+
+@*
+    Social Media Component Partial
+*@
+
+<br />
+
+<div class="w3l_header_right" style="margin-left:20px">
+	<div class="w3ls-social-icons text-left">
+		@foreach(var item in Model)
+		{
+			<a class="@item.Name" href="@item.Url"><i class="fa fa-@item.Name"></i></a>
+        }
+	</div>
+</div>

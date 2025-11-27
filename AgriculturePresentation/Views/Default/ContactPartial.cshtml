@@ -1,0 +1,32 @@
+﻿@*
+    Contact Partial View
+*@
+
+
+<div class="col-md-9 contact-middle">
+
+
+    @if (ViewBag.error != null)
+    {
+        <div style="color:red; margin-top:10px; font-weight:bold;background-color:cornsilk">
+            @ViewBag.error
+        </div>
+    }
+
+    <h2>Mesaj Gönder</h2>
+    <form action="/Default/SendMessage" method="post">
+        <div class="form-agileinfo">
+            <p>İsim Soyisim</p>
+            <input type="text" name="Name" placeholder="Adınız Soyadınız" required="" />
+            <p>Mail Adresi</p>
+            <input type="email" name="Mail" placeholder="Mail adresiniz" required="" />
+        </div>
+        <div class="form-agileits-w3layouts">
+            <p>Yorum</p>
+            <textarea name="Message" placeholder="Mesajınız" required="Mesajı giriniz"></textarea>
+            <input type="submit" value="Mesajı Gönder">
+
+        </div>
+        <div class="clearfix"></div>
+    </form>
+</div>

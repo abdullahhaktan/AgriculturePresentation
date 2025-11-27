@@ -1,0 +1,27 @@
+﻿@using System.Text.Json
+@* Dashboard Graphic Component Partial *@
+
+<div class="row">
+    <div class="col-md-7 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <p class="card-title">Aylara Göre Duyuru Sayısı</p>
+                <p class="mb-4">Son Yılda Aylara Göre Duyuru Sayısı</p>
+                <div id="cash-deposits-chart-legend" class="d-flex justify-content-center pt-3"></div>
+                <canvas id="announcement-chart"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-5 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <p class="card-title">Takım Büyümesi</p>
+                <h1>Mevcutta @ViewBag.TeamCount Kişi</h1>
+                <h4>Yıllara göre takım büyümesi</h4>
+                <p class="text-muted">2010'dan bugüne takımımızdaki kişi sayısının gelişimi</p>
+                <div id="team-growth-chart-legend"></div>
+            </div>
+            <canvas id="team-growth-chart"></canvas>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+﻿@model List<Admin>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="row">
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Admin</h4>
+                    <p class="card-description">
+                        Kullanıcı yönetim
+                    </p>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Başlık</th>
+                                    <th>Sil</th>
+                                    <th>Düzenle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.AdminID</td>
+                                        <td>@item.AdminUserName</td>
+                                        <td><a class="btn btn-outline-danger" href="/Admin/DeleteAdmin/@item.AdminID">Sil</a></td>
+                                        <td><a class="btn btn-outline-dark" href="/Admin/UpdateAdmin/@item.AdminID">Güncelle</a></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <a href="/Admin/AddAdmin" class="btn btn-outline-info">Yeni Hizmet Girişi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

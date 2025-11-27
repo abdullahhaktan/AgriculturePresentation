@@ -1,0 +1,33 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@await Html.PartialAsync("/Views/AdminPartials/_PartialHead.cshtml")
+
+<body>
+    <div class="container-scroller">
+        <!-- partial:/MajesticAdmin-Free-Bootstrap-Admin-Template/template/partials/_navbar.html -->
+        @await Html.PartialAsync("/Views/AdminPartials/_PartialNavbar.cshtml")
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial:/MajesticAdmin-Free-Bootstrap-Admin-Template/template/partials/_sidebar.html -->
+            @await Html.PartialAsync("/Views/AdminPartials/_PartialSidebar.cshtml")
+            <!-- partial -->
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    @RenderBody()
+                    <!-- main-panel ends -->
+                    @await Html.PartialAsync("/Views/AdminPartials/_PartialFooter.cshtml")
+                </div>
+            </div>
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    @await Html.PartialAsync("/Views/AdminPartials/_PartialScripts.cshtml")
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\MajesticAdmin-Free-Bootstrap-Admin-Template-master\**" />
+    <Content Remove="wwwroot\MajesticAdmin-Free-Bootstrap-Admin-Template-master\**" />
+    <EmbeddedResource Remove="wwwroot\MajesticAdmin-Free-Bootstrap-Admin-Template-master\**" />
+    <None Remove="wwwroot\MajesticAdmin-Free-Bootstrap-Admin-Template-master\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\MajesticAdmin-Free-Bootstrap-Admin-Template\.DS_Store" />
+    <None Include="wwwroot\MajesticAdmin-Free-Bootstrap-Admin-Template\template\.DS_Store" />
+    <None Include="wwwroot\MajesticAdmin-Free-Bootstrap-Admin-Template\template\documentation\.DS_Store" />
+    <None Include="wwwroot\MajesticAdmin-Free-Bootstrap-Admin-Template\template\fonts\.DS_Store" />
+    <None Include="wwwroot\MajesticAdmin-Free-Bootstrap-Admin-Template\template\fonts\Roboto\.DS_Store" />
+    <None Include="wwwroot\MajesticAdmin-Free-Bootstrap-Admin-Template\template\images\.DS_Store" />
+    <None Include="wwwroot\MajesticAdmin-Free-Bootstrap-Admin-Template\template\images\auth\.DS_Store" />
+    <None Include="wwwroot\MajesticAdmin-Free-Bootstrap-Admin-Template\template\images\faces\.DS_Store" />
+    <None Include="wwwroot\MajesticAdmin-Free-Bootstrap-Admin-Template\template\js\.DS_Store" />
+    <None Include="wwwroot\MajesticAdmin-Free-Bootstrap-Admin-Template\template\pages\.DS_Store" />
+    <None Include="wwwroot\MajesticAdmin-Free-Bootstrap-Admin-Template\template\pages\charts\.DS_Store" />
+    <None Include="wwwroot\MajesticAdmin-Free-Bootstrap-Admin-Template\template\pages\forms\.DS_Store" />
+    <None Include="wwwroot\MajesticAdmin-Free-Bootstrap-Admin-Template\template\pages\icons\.DS_Store" />
+    <None Include="wwwroot\MajesticAdmin-Free-Bootstrap-Admin-Template\template\pages\samples\.DS_Store" />
+    <None Include="wwwroot\MajesticAdmin-Free-Bootstrap-Admin-Template\template\pages\tables\.DS_Store" />
+    <None Include="wwwroot\MajesticAdmin-Free-Bootstrap-Admin-Template\template\pages\ui-features\.DS_Store" />
+    <None Include="wwwroot\MajesticAdmin-Free-Bootstrap-Admin-Template\template\scss\.DS_Store" />
+    <None Include="wwwroot\MajesticAdmin-Free-Bootstrap-Admin-Template\template\scss\components\.DS_Store" />
+    <None Include="wwwroot\MajesticAdmin-Free-Bootstrap-Admin-Template\template\scss\mixins\.DS_Store" />
+    <None Include="wwwroot\MajesticAdmin-Free-Bootstrap-Admin-Template\template\vendors\.DS_Store" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.105.0" />
+    <PackageReference Include="EPPlus" Version="8.3.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.3.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.21" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.21" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.21" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.21">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj" />
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj" />
+    <ProjectReference Include="..\EnitityFramework\EntityLayer.csproj" />
+  </ItemGroup>
+
+</Project>

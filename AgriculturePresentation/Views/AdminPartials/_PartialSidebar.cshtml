@@ -1,0 +1,115 @@
+﻿<nav class="sidebar">
+    <ul class="nav-links">
+        <li>
+            <a href="/Dashboard/Index">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+        <li>
+            <a href="/Service/Index">
+                <i class="fas fa-concierge-bell"></i>
+                <span>Hizmetlerimiz</span>
+            </a>
+        </li>
+        <li>
+            <a href="/Team/Index">
+                <i class="fas fa-users"></i>
+                <span>Takım arkadaşlarımız</span>
+            </a>
+        </li>
+        <li>
+            <a href="/Graphic/Index">
+                <i class="fas fa-chart-line"></i>
+                <span>Grafikler</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fas fa-chart-pie"></i>
+                <span>İstatistikler</span>
+            </a>
+        </li>
+        <li>
+            <a href="/Announcement/Index">
+                <i class="fas fa-bullhorn"></i>
+                <span>Duyurular</span>
+            </a>
+        </li>
+        <li>
+            <a href="/Contact/Index">
+                <i class="fas fa-envelope"></i>
+                <span>Gelen Mesajlar</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Adres Bilgileri</span>
+            </a>
+        </li>
+        <li>
+            <a href="/Image/Index">
+                <i class="fas fa-image"></i>
+                <span>Görseller</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fas fa-cog"></i>
+                <span>Ayarlar</span>
+            </a>
+        </li>
+        <li>
+            <a href="/Login/LogOut">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Çıkış Yap</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<style>
+    .sidebar {
+        width: 260px;
+        background: linear-gradient(135deg, #2c3e50, #4a6491);
+        color: white;
+        height: 80vh; /* BOYU KISALTILDI */
+        padding: 20px 0;
+        overflow-y: auto; /* Taşarsa kaydırma olsun */
+    }
+
+    .nav-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+        .nav-links li {
+            margin: 5px 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+            .nav-links li:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+
+        .nav-links a {
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .nav-links i {
+            margin-right: 15px;
+            font-size: 1.2rem;
+            width: 25px;
+            text-align: center;
+        }
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

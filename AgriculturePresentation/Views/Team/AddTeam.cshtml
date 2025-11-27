@@ -1,0 +1,67 @@
+﻿@model EntityLayer.Concrete.Team
+
+@{
+    ViewData["Title"] = "AddTeam";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="row">
+        <div class="col-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Takım Üyesi Ekleme</h4>
+                    <p class="card-description">
+                        Yeni Takım Üyesi Girişi
+                    </p>
+                    <form method="post">
+                        <div class="form-group">
+                            @Html.Label("Kişi Adı Soyadı")
+                            <span asp-validation-for="PersonName" class="text-danger"></span>
+                            <input type="text" asp-for="PersonName" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            @Html.Label("Unvan / Pozisyon")
+                            <span asp-validation-for="Title" class="text-danger"></span>
+                            <input type="text" asp-for="Title" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            @Html.Label("Profil Görsel Yolu")
+                            <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                            <input type="text" asp-for="ImageUrl" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            @Html.Label("Facebook Adresi")
+                            <span asp-validation-for="FacebookUrl" class="text-danger"></span>
+                            <input type="text" asp-for="FacebookUrl" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            @Html.Label("Instagram Adresi")
+                            <span asp-validation-for="InstagramUrl" class="text-danger"></span>
+                            <input type="text" asp-for="InstagramUrl" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            @Html.Label("Twitter Adresi")
+                            <span asp-validation-for="TwitterUrl" class="text-danger"></span>
+                            <input type="text" asp-for="TwitterUrl" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            @Html.Label("Website Adresi")
+                            <span asp-validation-for="WebsiteUrl" class="text-danger"></span>
+                            <input type="text" asp-for="WebsiteUrl" class="form-control" />
+                        </div>
+
+                        <br />
+                        <button type="submit" class="btn btn-primary">Ekle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,61 @@
+﻿@{
+	ViewData["Title"] = "Index";
+	Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@await Component.InvokeAsync("_HeadComponentPartial")
+
+<body>
+	<!-- header -->
+	@await Component.InvokeAsync("_HeaderComponentPartial")
+
+	<!-- //header -->
+	<!--Slider-->
+	<div class="slider">
+
+        @await Component.InvokeAsync("_NavbarComponentPartial")
+
+        @await Component.InvokeAsync("_SliderComponentPartial")
+
+	</div>
+
+    @await Component.InvokeAsync("_SliderPopupComponentPartial")
+
+	<!-- about -->
+
+    @await Component.InvokeAsync("_AboutComponentPartial")
+
+	<!-- //about-bottom -->
+
+	<!--sevices-->
+
+    @await Component.InvokeAsync("_ServiceComponentPartial")
+
+	<!--//sevices-->
+
+	<!-- team -->
+
+    @await Component.InvokeAsync("_TeamComponentPartial")
+
+	<!-- //team -->
+	@await Component.InvokeAsync("_LatestNewsComponentPartial")
+
+	<!-- gallery -->
+    @await Component.InvokeAsync("_GaleryComponentPartial")
+
+	<!--footer-->
+    @await Component.InvokeAsync("_ContactComponentPartial")
+
+    @await Component.InvokeAsync("_SocialMediaComponentPartial")
+
+	<div class="copy">
+		<p>© 2017 In Harvest . All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a> </p>
+	</div>
+
+    @await Component.InvokeAsync("_ScriptsComponentPartial")
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿@model Admin
+
+@{
+    ViewData["Title"] = "AddAdmin";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="row">
+        <div class="col-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Admin ekleme</h4>
+                    <p class="card-description">
+                        Admin Girişi
+                    </p>
+                    <form method="post">
+                        <div class="form-group">
+                            @Html.Label("Kullanıcı Adı")
+                            <span asp-validation-for="AdminUserName" class="text-danger"></span>
+                            <input type="text" asp-for="AdminUserName" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            @Html.Label("Şifre")
+                            <span asp-validation-for="AdminPassword" class="text-danger"></span>
+                            <input type="text" asp-for="AdminPassword" class="form-control" />
+                        </div>
+                        <br />
+                        <button type="submit" class="btn btn-primary">Ekle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

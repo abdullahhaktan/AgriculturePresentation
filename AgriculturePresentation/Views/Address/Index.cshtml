@@ -1,0 +1,43 @@
+﻿@model Address
+
+@{
+    ViewData["Title"] = "UpdateService";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Adres Güncelleme</h4>
+            <p class="card-description">
+                Adresi Güncelle
+            </p>
+            <input type="hidden" asp-for="AddressId" />
+
+            <form method="post">
+                <div class="form-group">
+                    @Html.Label("Adres")
+                    <span asp-validation-for="Description1" class="text-danger"></span>
+                    <input type="text" asp-for="Description1" class="form-control" />
+                </div>
+                <div class="form-group">
+                    @Html.Label("Şehir")
+                    <span asp-validation-for="Description2" class="text-danger"></span>
+                    <input type="text" asp-for="Description2" class="form-control" />
+                </div>
+                <div class="form-group">
+                    @Html.Label("Ülke")
+                    <input type="text" asp-for="Description3" class="form-control" />
+                    <span asp-validation-for="Description3" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Telefon numarası")
+                    <input type="text" asp-for="PhoneNumber" class="form-control" />
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+                <br />
+                <button type="submit" class="btn btn-primary">Kaydet</button>
+            </form>
+        </div>
+    </div>
+</div>

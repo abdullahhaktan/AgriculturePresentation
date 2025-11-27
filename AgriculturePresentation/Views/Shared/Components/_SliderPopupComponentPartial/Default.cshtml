@@ -1,0 +1,24 @@
+﻿@model List<NavbarSlide>
+
+@*
+    Popup Component Partial
+*@
+
+@foreach (var item in Model)
+{
+    <div class="modal fade" id="@item.NavbarSlideID" tabindex="-1" role="dialog">
+        <!-- Modal1 -->
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4>Hasat Da</h4>
+                    <img src="~/web/images/banner1.jpg" alt="" class="img-responsive">
+                    <h5>@item.Title</h5>
+                    <p>@item.Description</p>
+                </div>
+            </div>
+        </div>
+    </div>
+}

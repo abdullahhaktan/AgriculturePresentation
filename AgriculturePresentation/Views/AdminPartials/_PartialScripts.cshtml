@@ -1,0 +1,82 @@
+﻿@using System.Text.Json
+@* Admin Layout Scripts *@
+
+<!-- Vendor Bundle -->
+<script src="/MajesticAdmin-Free-Bootstrap-Admin-Template/template/vendors/base/vendor.bundle.base.js"></script>
+<script src="/MajesticAdmin-Free-Bootstrap-Admin-Template/template/vendors/chart.js/Chart.min.js"></script>
+<script src="/MajesticAdmin-Free-Bootstrap-Admin-Template/template/vendors/datatables.net/jquery.dataTables.js"></script>
+<script src="/MajesticAdmin-Free-Bootstrap-Admin-Template/template/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+
+<!-- Template Scripts -->
+<script src="/MajesticAdmin-Free-Bootstrap-Admin-Template/template/js/off-canvas.js"></script>
+<script src="/MajesticAdmin-Free-Bootstrap-Admin-Template/template/js/hoverable-collapse.js"></script>
+<script src="/MajesticAdmin-Free-Bootstrap-Admin-Template/template/js/template.js"></script>
+<script src="/MajesticAdmin-Free-Bootstrap-Admin-Template/template/js/dashboard.js"></script>
+<script src="/MajesticAdmin-Free-Bootstrap-Admin-Template/template/js/data-table.js"></script>
+<script src="/MajesticAdmin-Free-Bootstrap-Admin-Template/template/js/jquery.dataTables.js"></script>
+<script src="/MajesticAdmin-Free-Bootstrap-Admin-Template/template/js/dataTables.bootstrap4.js"></script>
+<script src="/MajesticAdmin-Free-Bootstrap-Admin-Template/template/js/jquery.cookie.js"></script>
+
+@if (ViewBag.Dashboard is not null)
+{
+    <script>
+        $(function() {
+            // Duyuru grafiği
+            var ctxAnnouncement = document.getElementById('announcement-chart');
+            if(ctxAnnouncement) {
+                var monthlyData = @Html.Raw(JsonSerializer.Serialize(ViewBag.MonthlyAnnouncementCounts ?? new List<int>()));
+                new Chart(ctxAnnouncement.getContext('2d'), {
+                    type: 'line',
+                    data: {
+                        labels: ['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'],
+                        datasets: [{
+                            label: 'Duyuru Sayısı',
+                            data: monthlyData,
+                            borderColor: 'rgba(54,162,235,1)',
+                            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                            fill: true,
+                            tension: 0.3
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: { legend: { display: true } },
+                        scales: { y: { beginAtZero: true } }
+                    }
+                });
+            }
+
+            // Takım büyüme grafiği
+            var teamCounts = @Html.Raw(JsonSerializer.Serialize(ViewBag.TeamCounts ?? new List<int>()));
+            var startYear = @ViewBag.StartYear;
+            var currentYear = @ViewBag.CurrentYear;
+
+            var years = [];
+            for(var year = startYear; year <= currentYear; year++) {
+                years.push(year);
+            }
+
+            var ctxTeam = document.getElementById('team-growth-chart');
+            if(ctxTeam) {
+                new Chart(ctxTeam.getContext('2d'), {
+                    type: 'line',
+                    data: {
+                        labels: years,
+                        datasets: [{
+                            label: 'Takım Üye Sayısı',
+                            data: teamCounts,
+                            borderColor: 'rgb(75, 192, 192)',
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                            tension: 0.4,
+                            fill: true
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: { legend: { display: true } }
+                    }
+                });
+            }
+        });
+    </script>
+}

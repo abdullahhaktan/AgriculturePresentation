@@ -1,0 +1,29 @@
+﻿@model List<Image>
+
+@*
+    Galery Component Partial
+*@
+
+<div class="gallery" id="gallery">
+    <div class="container">
+        <h3 class="tittle">Görseller</h3>
+        <p class="heading-btm-w3ls">Sürdürülebilir tarım yöntemleriyle bereketli toprakları işliyor, en kaliteli ve sağlıklı ürünleri yetiştiriyoruz. Modern teknikler ve çevreye duyarlı yaklaşımla, tazeliği sofralarınıza taşıyoruz.</p>
+        <div class="agile_gallery_grids w3-agile">
+            <ul class="clearfix demo">
+                @foreach(var item in Model)
+                {
+                    <li>
+                        <div class="gallery-grid1">
+                            <img src="@item.ImageUrl" style="width:250px;height:200px" alt="görsel" class="img-responsive" />
+                            <div class="p-mask">
+                                <h4>Hasat <span>da</span></h4>
+                                <p>@item.Description</p>
+                            </div>
+                        </div>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+<!--//gallery-->

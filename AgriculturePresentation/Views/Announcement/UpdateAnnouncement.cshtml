@@ -1,0 +1,43 @@
+﻿@model Announcement
+
+@{
+    ViewData["Title"] = "UpdateAnnouncement";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="row">
+        <div class="col-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Duyuru Güncelleme</h4>
+                    <p class="card-description">
+                        Duyuruyu Güncelle
+                    </p>
+                    <form method="post">
+
+                        <input type="hidden" asp-for="AnnouncementID" />
+
+                        <div class="form-group">
+                            @Html.Label("Başlık")
+                            <span asp-validation-for="Title" class="text-danger"></span>
+                            <input type="text" asp-for="Title" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            @Html.Label("Açıklama")
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                            <input type="text" asp-for="Description" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            @Html.Label("Açıklama")
+                            <input type="text" asp-for="Date" class="form-control" />
+                            <span asp-validation-for="Date" class="text-danger"></span>
+                        </div>
+                        <br />
+                        <button type="submit" class="btn btn-primary">Kaydet</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

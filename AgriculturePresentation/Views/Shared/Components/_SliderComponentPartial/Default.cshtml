@@ -1,0 +1,22 @@
+﻿@model List<NavbarSlide>
+
+@*
+    Slider Component Partial
+*@
+
+<div class="callbacks_container">
+	<ul class="rslides" id="slider3">
+		@foreach(var item in Model)
+		{
+			<li>
+				<div class="slider-info">
+					<h3>@item.Title</h3>
+					<p>@(item.Description.Length > 100 ? item.Description.Substring(0,100)+ "..." : item.Description)</p>
+					<div class="readmore-w3"><a class="readmore" href="#" data-toggle="modal" data-target="#@item.NavbarSlideID">Daha Fazla Oku</a></div>
+				</div>
+			</li>
+		}
+	</ul>
+
+</div>
+<div class="clearfix"></div>
