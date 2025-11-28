@@ -1,10 +1,12 @@
 ﻿using BusinessLayer.Abstract;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AgriculturePresentation.Controllers
 {
     public class DashboardController(IAnnouncementService _announcementService, IServiceService _serviceService, IImageService _imageService, IContactService _contactService,ITeamService _teamService) : Controller
     {
+        
         public IActionResult Index()
         {
 
