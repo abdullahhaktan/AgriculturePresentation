@@ -135,38 +135,30 @@ The goal is to manage **agriculture services, announcements, team members, and c
     * Restore NuGet packages if needed.
     * Press **F5** to run.
 
----
+### Ekran Görüntüleri
 
-<img width="937" height="385" alt="Ekran görüntüsü 2025-11-27 155346" src="https://github.com/user-attachments/assets/cf45add7-9e17-42d7-8850-90a5dd8299e6" />
-
----
-
-<img width="930" height="410" alt="Ekran görüntüsü 2025-11-27 155410" src="https://github.com/user-attachments/assets/4ba64191-d917-430f-ae9d-dd771d9833a2" />
+<img width="724" height="388" alt="Ekran görüntüsü 2026-02-01 151216" src="https://github.com/user-attachments/assets/4724f1bb-991f-4858-8a29-e67e7c43d1a2" />
 
 ---
 
-<img width="929" height="320" alt="Ekran görüntüsü 2025-11-27 155434" src="https://github.com/user-attachments/assets/239123e0-b0b9-4f50-89f4-e96b8efb6591" />
+<img width="604" height="424" alt="Ekran görüntüsü 2026-02-01 151240" src="https://github.com/user-attachments/assets/ec2bed1a-bb9f-41e3-a5c5-0db68e306020" />
 
 ---
 
-<img width="925" height="340" alt="Ekran görüntüsü 2025-11-27 155450" src="https://github.com/user-attachments/assets/50dde152-f0e4-4600-80a2-f92b17e56d82" />
+<img width="670" height="317" alt="Ekran görüntüsü 2026-02-01 151307" src="https://github.com/user-attachments/assets/469fb3bb-6c0b-4e03-84f2-fb3091e3bc91" />
 
 ---
 
-<img width="878" height="356" alt="Ekran görüntüsü 2025-11-27 155510" src="https://github.com/user-attachments/assets/06932e25-81b9-49c3-a4e7-6aa27a318e2a" />
+<img width="644" height="340" alt="Ekran görüntüsü 2026-02-01 151336" src="https://github.com/user-attachments/assets/2f6d3b9c-1e7e-49a8-9beb-9a0202901143" />
 
 ---
 
-<img width="907" height="275" alt="Ekran görüntüsü 2025-11-27 155526" src="https://github.com/user-attachments/assets/01bba750-2217-47fb-b9bf-c4898cbd1700" />
+<img width="644" height="340" alt="Ekran görüntüsü 2026-02-01 151336" src="https://github.com/user-attachments/assets/31b97632-6657-48a2-abca-b0d272813725" />
 
 ---
 
-<img width="923" height="265" alt="Ekran görüntüsü 2025-11-27 155545" src="https://github.com/user-attachments/assets/0893fc73-062a-44be-8b50-fe1be0e3f66f" />
+<img width="469" height="269" alt="Ekran görüntüsü 2026-02-01 151409" src="https://github.com/user-attachments/assets/1f6cd99a-0f6e-47a7-865b-02b239a38b0c" />
 
 ---
 
-<img width="937" height="238" alt="Ekran görüntüsü 2025-11-27 155600" src="https://github.com/user-attachments/assets/54ad3751-dac1-49db-af29-a97b0f49cee2" />
-
----
-
-<img width="1901" height="2048" alt="localhost_7138_Dashboard_Index" src="https://github.com/user-attachments/assets/46fe5242-9925-4ee7-bcab-6134cee41134" />
+<img width="949" height="437" alt="Ekran görüntüsü 2026-02-01 151535" src="https://github.com/user-attachments/assets/1b0d3e9e-2e2a-4fc1-9735-6b89473f2c98" />
