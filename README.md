@@ -1,164 +1,227 @@
-# AgricultureManagementSystem
+# 🌾 Agriculture Management System – ASP.NET Core MVC + EF Core + Identity Based Admin Platform
 
-[TR]
+> ASP.NET Core MVC, Entity Framework Core ve Identity kullanılarak geliştirilmiş modern tarım yönetim sistemi  
+> A modern agriculture management platform built with ASP.NET Core MVC, Entity Framework Core and Identity
 
-**ASP.NET Core MVC + Entity Framework Core + Identity Kullanılarak Geliştirilmiş Tarım Yönetimi Uygulaması**
-
-[![Entity Framework](https://img.shields.io/badge/ORM-Entity_Framework_Core-6C2DBE.svg)](https://docs.microsoft.com/en-us/ef/core/)
-[![C#](https://img.shields.io/badge/Language-C%23-blue.svg)](https://docs.microsoft.com/en-us/dotnet/csharp/)
-[![ASP.NET Core](https://img.shields.io/badge/Framework-ASP.NET_Core-5C2D91.svg)](https://docs.microsoft.com/en-us/aspnet/core/)
-[![Database](https://img.shields.io/badge/Database-SQL_Server-CC2927.svg)](https://www.microsoft.com/en-us/sql-server)
-[![GitHub repo size](https://img.shields.io/github/repo-size/username/AgricultureManagementSystem)](https://github.com/username/AgricultureManagementSystem)
-
----
-
-## 💻 Proje Hakkında
-
-Bu proje, **ASP.NET Core MVC**, **Entity Framework Core** ve **Identity** teknolojilerini kullanarak geliştirilmiş bir **tarım yönetimi uygulamasıdır**.  
-Amaç, kullanıcıların **tarım hizmetlerini, duyuruları, ekip üyelerini ve iletişim bilgilerini** yönetebildiği bir sistem oluşturmaktır.
+[![.NET](https://img.shields.io/badge/.NET-ASP.NET_Core-512bd4?logo=dotnet)](https://dotnet.microsoft.com/)
+[![ORM](https://img.shields.io/badge/ORM-Entity_Framework_Core-6C2DBE.svg)](https://learn.microsoft.com/ef/core/)
+[![Database](https://img.shields.io/badge/Database-SQL_Server-CC2927.svg)](https://www.microsoft.com/sql-server)
+[![Auth](https://img.shields.io/badge/Auth-ASP.NET_Identity-blue.svg)](https://learn.microsoft.com/aspnet/core/security/authentication/identity)
+[![Validation](https://img.shields.io/badge/Validation-FluentValidation-green.svg)](https://fluentvalidation.net/)
+[![Language](https://img.shields.io/badge/Language-C%23-blue.svg)](https://learn.microsoft.com/dotnet/csharp/)
 
 ---
 
-## ✨ Temel Özellikler
+## 🚀 Özellikler / Features
 
-### Kullanıcı ve Kimlik Yönetimi
-* **Login/Logout:** ASP.NET Core Identity ile güvenli giriş ve çıkış işlemleri.
-* **Rol Yönetimi:** Kullanıcı yetkilendirme (Admin, User vb.).
-
-### CRUD Operasyonları
-* **Duyurular:** Ekleme, güncelleme, silme ve listeleme.
-* **Hizmetler:** Tarım hizmetlerini yönetme.
-* **Takım Yönetimi:** Ekip üyeleri ekleme, düzenleme ve silme.
-* **Adres ve İletişim Yönetimi:** Firma veya çiftçi bilgilerini kaydetme ve görüntüleme.
-
-### Validasyon
-* **FluentValidation:** Model doğrulama ve kullanıcı dostu hata mesajları.
-* **Tarih ve Alan Kontrolü:** Boş alan kontrolü, tarih geçerliliği, minimum karakter kontrolü.
-
-### Kullanılan Teknolojiler
-* **C#**  
-* **ASP.NET Core MVC**  
-* **Entity Framework Core**  
-* **SQL Server**  
-* **ASP.NET Core Identity**  
-* **FluentValidation**  
-* **Razor View Engine**
+| 🇹🇷 Türkçe | 🇬🇧 English |
+|-----------|------------|
+| Identity ile güvenli kullanıcı yönetimi | Secure user management via Identity |
+| Admin panel destekli CRUD işlemleri | Admin panel based CRUD operations |
+| FluentValidation ile doğrulama sistemi | Model validation with FluentValidation |
+| Entity Framework Core veri yönetimi | EF Core database management |
+| Katmanlı mimari yapı | Layered architecture |
+| Rol tabanlı yetkilendirme | Role-based authorization |
+| SQL Server veri tabanı | SQL Server integration |
 
 ---
 
-## 🚀 Nasıl Çalıştırılır?
+## 💻 Proje Hakkında / About the Project
 
-1.  **Projeyi Klonlama:**
-    ```bash
-    git clone https://github.com/username/AgricultureManagementSystem
-    cd AgricultureManagementSystem
-    ```
+Bu proje **tarım hizmetlerini yönetmek**, duyurular yayınlamak, ekip üyelerini düzenlemek ve iletişim bilgilerini yönetmek için geliştirilmiştir.
 
-2.  **Veritabanı Kurulumu:**
-    * Eğer **EF Migrations** kullanıyorsa: **Package Manager Console** üzerinden `Update-Database` komutunu çalıştırın.  
-    * Manuel kurulum gerekiyorsa: **SQL Server Management Studio** açın ve gerekli tabloları oluşturun.
-
-3.  **Bağlantı Dizesi Ayarı:**
-    * `appsettings.json` içindeki SQL Server bağlantı dizesini kendi ortamınıza göre güncelleyin:
-    ```json
-    "ConnectionStrings": {
-        "DefaultConnection": "Server=YOUR_SERVER;Database=DbAgriculture;Trusted_Connection=True;Encrypt=True;TrustServerCertificate=True;"
-    }
-    ```
-
-4.  **Projeyi Başlatma:**
-    * Visual Studio ile `.sln` dosyasını açın.
-    * Gerekirse NuGet paketlerini geri yükleyin.
-    * **F5** ile çalıştırın.
+This system enables management of agriculture services, announcements, team members and contact information through an admin panel interface.
 
 ---
 
-[EN]
+## 🔐 Identity & Authorization Architecture
 
-# AgricultureManagementSystem
+Projede **ASP.NET Core Identity** kullanılmıştır:
 
-**ASP.NET Core MVC + EF Core + Identity Based Agriculture Management System**
+✔ Login / Logout sistemi  
+✔ Role-based authorization  
+✔ Secure password infrastructure  
+✔ Admin / User role separation  
 
----
-
-## 💻 About the Project
-
-This project is an **agriculture management system** built with **ASP.NET Core MVC**, **EF Core**, and **Identity**.  
-The goal is to manage **agriculture services, announcements, team members, and contact information** efficiently.
+Provides enterprise-ready authentication infrastructure.
 
 ---
 
-## ✨ Core Features
+## 🧩 CRUD Yönetim Modülleri / CRUD Modules
 
-### User & Identity Management
-* **Login/Logout:** Secure login and logout with ASP.NET Core Identity.
-* **Role Management:** Admin and user role authorization.
+Admin panel üzerinden aşağıdaki modüller yönetilmektedir:
 
-### CRUD Operations
-* **Announcements:** Add, update, delete, list.
-* **Services:** Manage agriculture services.
-* **Team Management:** Add, edit, delete team members.
-* **Address & Contact Management:** Store and view addresses and contact information.
+✔ Announcements  
+✔ Services  
+✔ Team Members  
+✔ Address & Contact Information  
 
-### Validation
-* **FluentValidation:** Model validation with user-friendly messages.
-* **Date & Field Control:** Non-empty fields, minimum character length, future date validation.
-
-### Technologies
-* **C#**  
-* **ASP.NET Core MVC**  
-* **Entity Framework Core**  
-* **SQL Server**  
-* **ASP.NET Core Identity**  
-* **FluentValidation**  
-* **Razor View Engine**
+Provides full administrative lifecycle management.
 
 ---
 
-## 🚀 How to Run
+## 🧪 Validation Architecture
 
-1.  **Clone the Project:**
-    ```bash
-    git clone https://github.com/username/AgricultureManagementSystem
-    cd AgricultureManagementSystem
-    ```
+Projede **FluentValidation** kullanılmıştır:
 
-2.  **Database Setup:**
-    * If **EF Migrations** are used: run `Update-Database` in **Package Manager Console**.  
-    * If manual setup: create required tables in **SQL Server Management Studio**.
+✔ Required field validation  
+✔ Minimum character validation  
+✔ Date validation  
+✔ User-friendly validation messages  
 
-3.  **Configure Connection String:**
-    * Update the connection string in `appsettings.json` to match your local SQL Server.
-
-4.  **Start the Project:**
-    * Open the `.sln` file in Visual Studio.
-    * Restore NuGet packages if needed.
-    * Press **F5** to run.
-
-### Ekran Görüntüleri
-
-<img width="724" height="388" alt="Ekran görüntüsü 2026-02-01 151216" src="https://github.com/user-attachments/assets/4724f1bb-991f-4858-8a29-e67e7c43d1a2" />
+Ensures strong input validation pipeline.
 
 ---
 
-<img width="604" height="424" alt="Ekran görüntüsü 2026-02-01 151240" src="https://github.com/user-attachments/assets/ec2bed1a-bb9f-41e3-a5c5-0db68e306020" />
+## 🏗️ Mimari / Architecture
+
+```
+AgricultureManagementSystem/
+├── Controllers/
+│
+├── Models/
+│
+├── ViewModels/
+│
+├── Validators/
+│
+├── DataAccess/
+│
+├── Identity/
+│
+├── Views/
+│
+└── wwwroot/
+```
+
+Layered structure sayesinde sürdürülebilir ve genişletilebilir mimari sağlanmıştır.
 
 ---
 
-<img width="670" height="317" alt="Ekran görüntüsü 2026-02-01 151307" src="https://github.com/user-attachments/assets/469fb3bb-6c0b-4e03-84f2-fb3091e3bc91" />
+## 🛠️ Kullanılan Teknolojiler / Tech Stack
+
+| Layer | Technology |
+|------|------------|
+| Backend | ASP.NET Core MVC |
+| ORM | Entity Framework Core |
+| Authentication | ASP.NET Identity |
+| Validation | FluentValidation |
+| Database | SQL Server |
+| UI Engine | Razor View Engine |
+| Language | C# |
 
 ---
 
-<img width="644" height="340" alt="Ekran görüntüsü 2026-02-01 151336" src="https://github.com/user-attachments/assets/2f6d3b9c-1e7e-49a8-9beb-9a0202901143" />
+## ⚙️ Kurulum / Setup
+
+### Gereksinimler / Requirements
+
+- .NET SDK
+- SQL Server
+- Visual Studio 2022+
 
 ---
 
-<img width="644" height="340" alt="Ekran görüntüsü 2026-02-01 151336" src="https://github.com/user-attachments/assets/31b97632-6657-48a2-abca-b0d272813725" />
+### Adımlar / Steps
+
+```bash
+git clone https://github.com/username/AgricultureManagementSystem
+cd AgricultureManagementSystem
+```
+
+### Veritabanı Migration
+
+```
+Update-Database
+```
+
+### Connection String Güncelle
+
+```
+Server=YOUR_SERVER;
+Database=DbAgriculture;
+Trusted_Connection=True;
+Encrypt=True;
+TrustServerCertificate=True;
+```
+
+### Projeyi Çalıştır
+
+```
+dotnet run
+```
 
 ---
 
-<img width="469" height="269" alt="Ekran görüntüsü 2026-02-01 151409" src="https://github.com/user-attachments/assets/1f6cd99a-0f6e-47a7-865b-02b239a38b0c" />
+## 📊 Proje Vizyonu / Project Vision
+
+Bu proje aşağıdaki modern backend mimari bileşenlerini göstermektedir:
+
+✔ ASP.NET Identity authentication  
+✔ FluentValidation input pipeline  
+✔ EF Core relational database management  
+✔ Layered MVC architecture  
+
+Demonstrates a scalable admin-based agriculture management platform architecture.
 
 ---
 
-<img width="949" height="437" alt="Ekran görüntüsü 2026-02-01 151535" src="https://github.com/user-attachments/assets/1b0d3e9e-2e2a-4fc1-9735-6b89473f2c98" />
+## 📸 Screenshots
+
+<img width="724" height="388" src="https://github.com/user-attachments/assets/4724f1bb-991f-4858-8a29-e67e7c43d1a2" />
+
+<br/>
+
+---
+
+<br/>
+
+<img width="604" height="424" src="https://github.com/user-attachments/assets/ec2bed1a-bb9f-41e3-a5c5-0db68e306020" />
+
+<br/>
+
+---
+
+<br/>
+
+<img width="670" height="317" src="https://github.com/user-attachments/assets/469fb3bb-6c0b-4e03-84f2-fb3091e3bc91" />
+
+<br/>
+
+---
+
+<br/>
+
+<img width="644" height="340" src="https://github.com/user-attachments/assets/2f6d3b9c-1e7e-49a8-9beb-9a0202901143" />
+
+<br/>
+
+---
+
+<br/>
+
+<img width="644" height="340" src="https://github.com/user-attachments/assets/31b97632-6657-48a2-abca-b0d272813725" />
+
+<br/>
+
+---
+
+<br/>
+
+<img width="469" height="269" src="https://github.com/user-attachments/assets/1f6cd99a-0f6e-47a7-865b-02b239a38b0c" />
+
+<br/>
+
+---
+
+<br/>
+
+<img width="949" height="437" src="https://github.com/user-attachments/assets/1b0d3e9e-2e2a-4fc1-9735-6b89473f2c98" />
+
+---
+
+## 👨‍💻 Developer
+
+**Abdullah Haktan**
+
+GitHub → https://github.com/abdullahhaktan
